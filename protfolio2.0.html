@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #222;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: #ff7eb3;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.7rem;
+      animation: fadeIn 1.5s ease;
+    }
+    .highlight {
+      color: #fff59d;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #555;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #fff;
+    }
+    .section:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .skills-list li {
+      background: #eee;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project {
+      margin: 2rem auto;
+      max-width: 600px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #ff758c;
+      font-weight: bold;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button.btn {
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1 class="logo">shivanitech777</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm <span class="highlight">Front-End Dev</span></h2>
+      <p>Crafting beautiful and responsive websites using HTML, CSS & JavaScript.</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me 😊</h2>
+    <p>
+      I'm a passionate front-end developer who loves turning ideas into real, interactive web experiences.<br> 
+      Constantly learning and building.<br><br>
+      Passionate and detail-oriented Front-End Developer with a strong foundation in HTML, CSS, and JavaScript.<br>
+      I specialize in creating responsive, user-friendly interfaces and enjoy bringing creative designs to life through clean, maintainable code.<br>
+      With a keen eye for aesthetics and usability, I focus on delivering high-quality web experiences that are both functional and visually engaging.<br>
+      Eager to contribute to innovative teams and continuously grow in a dynamic tech environment.<br><br>
+      🛠️ <strong>Key Skills:</strong><br>
+      Basic HTML, CSS & JavaScript<br> 
+      Quick learner and adaptable<br>
+      Strong communication & teamwork<br>
+      Creative thinking and attention to detail<br>
+      Problem-solving mindset.
+    </p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Personal Portfolio</h3>
+      <p>A clean and modern personal portfolio website built with HTML, CSS, and JavaScript.</p>
+      <a href="portfolio.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>To-Do App</h3>
+      <p>Simple to-do list application with add/delete features and local storage.</p>
+      <a href="to-do.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Timer</h3>
+      <p>A simple timer that has Pause, Reset, and Start functions.</p>
+      <a href="timer.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Clock</h3>
+      <p>A simple clock that displays hour, minutes, and seconds.</p>
+      <a href="clock.html" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 shivanitech777 | Front-End Developer</p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thank you for reaching out!");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
