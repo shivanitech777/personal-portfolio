@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Clock</title>
+  <Style> 
+    body {
+  background-color: #7c0d6f;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.clock-box {
+  background-color: rgb(192, 226, 42);
+  padding: 40px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#clock {
+  font-size: 40px;
+  color: #de5810;
+  letter-spacing: 3px;
+}
+
+  </Style>
+</head>
+<body>
+  <div class="clock-box">
+    <h1>Digital Clock</h1>
+    <div id="clock">00:00:00</div>
+  </div>
+  <script>
+    function showTime() {
+  const time = new Date();
+  let hours = String(time.getHours()).padStart(2, '0');
+  let minutes = String(time.getMinutes()).padStart(2, '0');
+  let seconds = String(time.getSeconds()).padStart(2, '0');
+
+  document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(showTime, 1000);
+showTime(); 
+
+  </script>
+</body>
+</html>
